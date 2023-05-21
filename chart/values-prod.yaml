@@ -1,0 +1,29 @@
+# Default values for prom-cw-ctl. Update them per your requirements
+#
+replicaCount: 1
+
+environment: prod
+
+image:
+  repository: "alertmanager-federation"
+  tag: "latest"
+  pullPolicy: "Always"
+
+annotations: {}
+
+resources:
+  limits:
+    memory: 2048Mi
+    cpu: 4
+  requests:
+    cpu: 100m
+    memory: 1024Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+volume:
+  emptyDir: {}
